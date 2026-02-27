@@ -77,21 +77,32 @@ Once either environment is running, navigate to the app in your browser and use 
 flask-on-docker/
 ├── .github/
 │   └── workflows/
-│       └── main.yml       # GitHub Actions CI workflow
-├── nginx/
-│   └── nginx.conf         # Nginx configuration
+│       └── main.yml            # GitHub Actions CI workflow
 ├── services/
+│   ├── nginx/
+│   │   ├── Dockerfile          # Nginx Dockerfile
+│   │   └── nginx.conf          # Nginx configuration
 │   └── web/
-│       ├── project/       # Flask app source code
-│       ├── Dockerfile     # Dev Dockerfile
-│       ├── Dockerfile.prod# Production Dockerfile
-│       └── manage.py      # DB management commands
-├── .env.dev               # Development environment variables
-├── .env.prod              # Production environment variables (non-DB)
-├── .gitignore             # Excludes .env.prod.db and other secrets
-├── docker-compose.yml     # Development Compose config
-├── docker-compose.prod.yml# Production Compose config
+│       ├── project/            # Flask app source code
+│       │   ├── __init__.py
+│       │   ├── config.py
+│       │   ├── media/
+│       │   │   └── .gitkeep    # Keeps empty media dir in version control
+│       │   └── static/
+│       │       └── hello.txt
+│       ├── Dockerfile          # Dev Dockerfile
+│       ├── Dockerfile.prod     # Production Dockerfile
+│       ├── entrypoint.sh       # Dev entrypoint script
+│       ├── entrypoint.prod.sh  # Production entrypoint script
+│       ├── manage.py           # DB management commands
+│       └── requirements.txt
+├── .env.dev                    # Development environment variables
+├── .env.prod                   # Production environment variables
+├── .gitignore                  # Excludes .env.prod.db and other secrets
+├── docker-compose.yml          # Development Compose config
+├── docker-compose.prod.yml     # Production Compose config
 └── README.md
 ```
+
 
 > **Note:** The `.env.prod.db` file containing production database credentials is excluded from this repository via `.gitignore` and must be created locally before running the production stack.
