@@ -97,7 +97,6 @@ flask-on-docker/
 │       ├── manage.py           # DB management commands
 │       └── requirements.txt
 ├── .env.dev                    # Development environment variables
-├── .env.prod                   # Production environment variables
 ├── .gitignore                  # Excludes .env.prod.db and other secrets
 ├── docker-compose.yml          # Development Compose config
 ├── docker-compose.prod.yml     # Production Compose config
