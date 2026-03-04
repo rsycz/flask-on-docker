@@ -28,7 +28,7 @@ docker compose up -d --build
 docker compose exec web python manage.py create_db
 ```
 
-The app will be available at **http://localhost:5000**.
+The app will be available at **http://localhost:1097**.
 
 To bring the services down:
 ```bash
@@ -47,7 +47,7 @@ docker compose -f docker-compose.prod.yml up -d --build
 docker compose -f docker-compose.prod.yml exec web python manage.py create_db
 ```
 
-The app will be available at **http://localhost:1337**.
+The app will be available at **http://localhost:1097**.
 
 To bring the services down:
 ```bash
