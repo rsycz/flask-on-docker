@@ -7,7 +7,7 @@
 This repository contains a containerized web application built with Flask, PostgreSQL, Gunicorn, and Nginx. The app is fully orchestrated with Docker Compose and supports two deployment modes: a lightweight development environment with Flask's built-in server, and a production-ready environment where Gunicorn serves the Flask app behind an Nginx reverse proxy. Users can upload image files through the web interface and retrieve them via URL.
 
 ## Image Upload Demonstration
-[Demo](image_viewing_video.gif)
+![Demo](image_viewing_video.gif)
 
 
 ## Build Instructions
